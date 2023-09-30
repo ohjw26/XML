@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE BookCatalog [
+<!ELEMENT BookCatalog (Book*)>
+<!ELEMENT Book (Title, Author, Year)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Author (#PCDATA)>
+<!ELEMENT Year (#PCDATA)>
+]>
+
+<BookCatalog>
+<Book>
+<Title>불편한 편의점</Title>
+<Author>김호연</Author>
+<Year>2021</Year>
+</Book>
+  
+<Book>
+<Title>물고기는 존재하지 않는다</Title>
+<Author>룰루 밀러</Author>
+<Year>2021</Year>
+</Book>
+
+<Book>
+<Title>도시와 그 불확실한 벽</Title>
+<Author>무라카미 하루키</Author>
+<Year>2023</Year>
+</Book>
+</BookCatalog>
