@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <element name="AudioCatalog">
+    <complexType>
+      <choice maxOccurs="unbounded">
+        <element name="cd" type="AlbumType"/>
+        <element name="lp" type="AlbumType"/>
+        <element name="mp3" type="AlbumType"/>
+      </choice>
+    </complexType>
+  </element>
+
+  <group name="AlbumGroup">
+    <sequence>
+      <element name="artist" type="string"/>
+      <element name="title" type="string"/>
+      <element name="genre" type="string"/>
+      <element name="released-date" type="string"/>
+      <element name="song" type="string"/>
+    </sequence>
+  </group>
+
+  <complexType name="AlbumType">
+    <sequence>
+      <group ref="AlbumGroup"/>
+       <element name="playTime">
+        <complexType>
+          <sequence>
+            <element name="hours" type="hourScope"/>
+            <element name="minutes" type="minuteScope"/>
+            <element name="seconds" type="secondScope"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+
+  <simpleType name="hourScope">
+    <restriction base="integer">
+      <minInclusive value="0"/>
+      <maxExclusive value="10"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="minuteScope">
+    <restriction base="integer">
+      <minInclusive value="0"/>
+      <maxExclusive value="60"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="secondScope">
+    <restriction base="integer">
+      <minInclusive value="0"/>
+      <maxExclusive value="60"/>
+    </restriction>
+  </simpleType>
+
+</schema>

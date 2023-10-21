@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<AudioCatalog>
+
+  <cd>
+    <artist>악동뮤지션</artist>
+    <title>Love Lee</title>
+    <genre>dance</genre>
+    <released-date>2023</released-date>
+    <song>Love Lee</song>
+  </cd>
+
+  <lp>
+    <artist>Charlie Puth</artist>
+    <title>Nine Track Mind</title>
+    <genre>pop</genre>
+    <released-date>2016</released-date>
+    <song>Dangerously</song>
+  </lp>
+
+  <mp3>
+    <artist>윤하</artist>
+    <title>End Theory</title>
+    <genre>rock</genre>
+    <released-date>2022</released-date>
+    <song>사건의 지평선</song>
+  </mp3>
+
+</AudioCatalog>

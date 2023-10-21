@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <element name="AudioCatalog">
+    <complexType>
+      <choice maxOccurs="unbounded">
+        <element name="cd" type="AlbumType"/>
+        <element name="lp" type="AlbumType"/>
+        <element name="mp3" type="AlbumType"/>
+      </choice>
+    </complexType>
+  </element>
+
+  <group name="AlbumGroup">
+    <sequence>
+      <element name="artist" type="string"/>
+      <element name="title" type="string"/>
+      <element name="genre" type="string"/>
+      <element name="released-date" type="string"/>
+      <element name="song" type="string"/>
+    </sequence>
+  </group>
+
+  <complexType name="AlbumType">
+    <sequence>
+      <group ref="AlbumGroup"/>
+    </sequence>
+  </complexType>
+
+</schema>
